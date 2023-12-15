@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="770.0" prefWidth="1118.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.ItemFormController">
+   <children>
+      <ImageView fitHeight="380.0" fitWidth="239.0" layoutX="852.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assests/1000_F_498582232_MrhnNdR2pIGmT8mIo62FFaeNAMOZxdWu.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutX="251.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Items" textAlignment="CENTER" wrappingWidth="456.5367736816406">
+         <font>
+            <Font name="System Bold" size="45.0" />
+         </font>
+      </Text>
+      <Text layoutX="33.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item Code    :" wrappingWidth="143.2442626953125" AnchorPane.leftAnchor="33.0">
+         <font>
+            <Font size="20.0" />
+         </font></Text>
+      <Text layoutX="34.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unit Price     :" AnchorPane.leftAnchor="34.0">
+         <font>
+            <Font size="20.0" />
+         </font></Text>
+      <Text layoutX="538.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description     :">
+         <font>
+            <Font size="20.0" />
+         </font></Text>
+      <Text layoutX="535.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qty On Hand   :">
+         <font>
+            <Font size="20.0" />
+         </font></Text>
+      <JFXTextField fx:id="txtcode" focusColor="BLACK" layoutX="150.0" layoutY="96.0" onAction="#itemseachONAction" prefHeight="26.0" prefWidth="202.0" unFocusColor="BLACK">
+         <font>
+            <Font size="20.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtprice" focusColor="BLACK" layoutX="152.0" layoutY="179.0" prefHeight="26.0" prefWidth="199.0" unFocusColor="BLACK" AnchorPane.topAnchor="179.0">
+         <font>
+            <Font size="20.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtdescription" focusColor="BLACK" layoutX="672.0" layoutY="122.0" prefHeight="26.0" prefWidth="215.0" unFocusColor="BLACK" AnchorPane.topAnchor="122.0">
+         <font>
+            <Font size="20.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtqty" focusColor="BLACK" layoutX="672.0" layoutY="183.0" prefHeight="26.0" prefWidth="212.0" unFocusColor="BLACK">
+         <font>
+            <Font size="20.0" />
+         </font></JFXTextField>
+      <TableView fx:id="tblItem" layoutX="29.0" layoutY="264.0" prefHeight="367.0" prefWidth="892.0">
+         <columns>
+            <TableColumn fx:id="colcode" prefWidth="159.46667671203613" text="Code" />
+            <TableColumn fx:id="coldescription" prefWidth="202.93331909179688" text="Description" />
+            <TableColumn fx:id="colprice" prefWidth="190.93331909179688" text="Unit Price" />
+            <TableColumn fx:id="colqty" minWidth="0.0" prefWidth="165.60003662109375" text="Qty On Hand" />
+            <TableColumn fx:id="colaction" prefWidth="168.79986572265625" text="Action" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnsave" buttonType="RAISED" layoutX="637.0" layoutY="646.0" lineSpacing="876.0" onAction="#btnsaveOnAction" prefHeight="27.0" prefWidth="64.0" style="-fx-background-color: #4cd137; -fx-background-radius: 0;" text="SAVE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnupdate" buttonType="RAISED" layoutX="713.0" layoutY="647.0" lineSpacing="876.0" onAction="#btnupdateOnAction" prefHeight="27.0" prefWidth="64.0" style="-fx-background-color: #3498db; -fx-background-radius: 0;" text="UPDATE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btndelete" buttonType="RAISED" layoutX="789.0" layoutY="646.0" lineSpacing="876.0" onAction="#btndeleteOnAction" prefHeight="27.0" prefWidth="64.0" style="-fx-background-color: #e84118; -fx-background-radius: 0;" text="DELETE" textFill="#fff6f6">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnclear" buttonType="RAISED" layoutX="862.0" layoutY="647.0" lineSpacing="876.0" onAction="#btnclearOnAction" prefHeight="27.0" prefWidth="64.0" style="-fx-background-color: #3498db; -fx-border-radius: 19;" text="CLEAR">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

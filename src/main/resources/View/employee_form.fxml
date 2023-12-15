@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="778.0" prefWidth="1104.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.EmployeeFormController">
+   <children>
+      <Text layoutX="297.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Details" textAlignment="CENTER" wrappingWidth="611.73681640625">
+         <font>
+            <Font name="System Bold" size="45.0" />
+         </font>
+      </Text>
+      <Text layoutX="46.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Id        :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="47.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name                  :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="47.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Number :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="46.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address               :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="txtseachId" layoutX="207.0" layoutY="102.0" onAction="#txtseachIdOnAction" prefHeight="43.0" prefWidth="233.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtname" layoutX="201.0" layoutY="157.0" prefHeight="43.0" prefWidth="237.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtaddress" layoutX="206.0" layoutY="205.0" prefHeight="43.0" prefWidth="233.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txttel" layoutX="206.0" layoutY="260.0" prefHeight="43.0" prefWidth="237.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <TableView fx:id="tblemployee" layoutX="27.0" layoutY="336.0" prefHeight="323.0" prefWidth="678.0">
+        <columns>
+          <TableColumn fx:id="colid" prefWidth="165.86669540405273" text="Id" />
+          <TableColumn fx:id="colname" prefWidth="150.13330841064453" text="Name" />
+            <TableColumn fx:id="coladdress" prefWidth="181.3333740234375" text="Address" />
+            <TableColumn fx:id="coltel" prefWidth="181.06658935546875" text="Contact Number" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnSave" layoutX="431.0" layoutY="665.0" onAction="#btnSaveOnAction" prefHeight="26.0" prefWidth="71.0" style="-fx-background-color: #4cd137;" text="SAVE" viewOrder="45.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnupdate" layoutX="505.0" layoutY="665.0" lineSpacing="876.0" onAction="#btnupdateOnAction" prefHeight="26.0" prefWidth="72.0" style="-fx-background-color: #3498db;" text="UPDATE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btndelete" layoutX="581.0" layoutY="666.0" lineSpacing="876.0" onAction="#btndeleteOnAction" prefHeight="20.0" prefWidth="71.0" style="-fx-background-color: #e84118;" text="DELETE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnclear" layoutX="656.0" layoutY="666.0" lineSpacing="876.0" onAction="#btnclearOnAction" prefHeight="24.0" prefWidth="65.0" style="-fx-background-color: #3498db;" text="CLEAR">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="935.0" layoutY="158.0" prefHeight="120.0" prefWidth="141.0" style="-fx-background-color: #0097e6;">
+         <children>
+            <ImageView fitHeight="61.0" fitWidth="87.0" layoutX="40.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assests/checking-attendance.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnattendance" contentDisplay="RIGHT" layoutX="-1.0" layoutY="78.0" onAction="#btnattendanceOnAction" prefHeight="46.0" prefWidth="146.0" text="Attendance Details">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="934.0" layoutY="312.0" prefHeight="120.0" prefWidth="141.0" style="-fx-background-color: #0097e6;">
+         <children>
+            <ImageView fitHeight="61.0" fitWidth="87.0" layoutX="40.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assests/recognition.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnsalary" contentDisplay="RIGHT" layoutX="-1.0" layoutY="78.0" onAction="#btnsalaryOnAction" prefHeight="46.0" prefWidth="146.0" text="Salary Details">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

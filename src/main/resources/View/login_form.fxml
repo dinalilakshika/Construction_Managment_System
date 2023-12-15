@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="547.0" prefWidth="831.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="552.0" fitWidth="850.0" layoutY="2.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../Assests/login (2).jpg" />
+         </image>
+      </ImageView>
+      <Text fill="#82ffea" layoutX="22.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DL CONSTRUCTION" textAlignment="CENTER" wrappingWidth="809.8776245117188">
+         <font>
+            <Font name="Century Schoolbook Bold" size="40.0" />
+         </font>
+         <effect>
+            <Blend opacity="0.2">
+               <topInput>
+                  <Shadow>
+                     <color>
+                        <Color red="0.25920000672340393" green="0.7225462198257446" blue="0.9599999785423279" />
+                     </color>
+                  </Shadow>
+               </topInput>
+            </Blend>
+         </effect></Text>
+      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="154.0" layoutY="143.0" lineSpacing="100.0" opacity="0.11" prefHeight="315.0" prefWidth="542.0" ripplerFill="#050505" style="-fx-background-color: #5f27cd;" text="Button" textFill="#5f27cd">
+         <font>
+            <Font size="1.0" />
+         </font></JFXButton>
+      <Text fill="WHITE" layoutX="389.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtusername" layoutX="221.0" layoutY="221.0" opacity="0.72" prefHeight="26.0" prefWidth="188.0" promptText="User Name">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </TextField>
+      <JFXButton layoutX="383.0" layoutY="355.0" />
+      <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="398.0" layoutY="382.0" lineSpacing="998.0" onAction="#btnLoginOnAction" prefHeight="26.0" prefWidth="101.0" style="-fx-background-color: #0652DD;" text="LOGIN" textAlignment="CENTER" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <PasswordField fx:id="btnpassword" layoutX="223.0" layoutY="290.0" opacity="0.72" prefHeight="26.0" prefWidth="188.0" promptText="Password">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </PasswordField>
+      <Label fx:id="lbltime" layoutX="160.0" layoutY="422.0" prefHeight="31.0" prefWidth="162.0" textFill="#fffcfc">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbldate" layoutX="565.0" layoutY="424.0" prefHeight="18.0" prefWidth="125.0" />
+   </children>
+</AnchorPane>
